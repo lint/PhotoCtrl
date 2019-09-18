@@ -1,0 +1,9 @@
+Package: com.lint.photoctrl
+Name: PhotoCtrl
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Adds a "ctrl + shift" like function for selecting photos. 
+Maintainer: lint <apieceoflint@protonmail.com>
+Author: lint <apieceoflint@protonmail.com>
+Section: Tweaks
