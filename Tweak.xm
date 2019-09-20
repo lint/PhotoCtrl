@@ -154,10 +154,10 @@
 
 			} else {
 				
-				//PUPhotosGridCell* firstSelectedCell = [self cellForItemAtIndexPath:[gvController ctrlFirstIndexPath]];
+				PUPhotosGridCell* firstSelectedCell = [self cellForItemAtIndexPath:[gvController ctrlFirstIndexPath]];
 				
-				//[firstSelectedCell.ctrlSelectOverlayView removeFromSuperview];
-				//firstSelectedCell.ctrlSelectOverlayView = nil;
+				[firstSelectedCell.ctrlSelectOverlayView removeFromSuperview];
+				firstSelectedCell.ctrlSelectOverlayView = nil;
 				
 				NSRange indexRange;
 				NSInteger firstRow = [gvController ctrlFirstIndexPath].row;
@@ -249,7 +249,8 @@
 				NSIndexPath* firstIndexPath = [gvController ctrlFirstIndexPath];
 				NSIndexPath* thisIndexPath = arg2;
 
-				HBLogDebug(@"firstIndexPath: %ld-%ld thisIndexPath: %ld-%ld", (long)firstIndexPath.section, (long)firstIndexPath.row, (long)thisIndexPath.section, (long)thisIndexPath.row);
+				HBLogDebug(@"firstIndexPath: %ld-%ld thisIndexPath: %ld-%ld", (long)firstIndexPath.section, (long)firstIndexPath.row, (long)thisIndexPath.section, (long)thisIndexPath.row);
+
 				if ( firstIndexPath.section == thisIndexPath.section && firstIndexPath.row == thisIndexPath.row){
 					
 					[orig ctrlSelectOverlayView].image = [UIImage imageWithContentsOfFile:@"/var/mobile/Library/Application Support/PhotoCtrl/check.png"];
